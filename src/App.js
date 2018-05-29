@@ -35,6 +35,12 @@ class App extends Component<Props, State> {
     }, 1000);
   }
 
+  handleClick = (event: SyntheticKeyboardEvent<HTMLButtonElement>) => {
+    this.setState(prevState => ({
+      count: prevState.count - 1
+    }));
+  };
+
   render() {
     return (
       <div>
@@ -42,6 +48,7 @@ class App extends Component<Props, State> {
         <div>Count: {this.state.count}</div>
         <MyComponent foo={20} />
         <MyComponent />
+        <button onClick={this.handleClick}>Increment</button>
       </div>
     );
   }
