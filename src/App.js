@@ -9,6 +9,11 @@ type State = {
   count: number
 };
 
+function MyComponent(props: Props) {
+  // props.doesNotExist;
+  return <div>{props.foo}</div>;
+}
+
 class App extends Component<Props, State> {
   static defaultProps = {
     foo: 42
@@ -31,6 +36,7 @@ class App extends Component<Props, State> {
       <div>
         <div>{this.props.foo}</div>
         <div>Count: {this.state.count}</div>
+        <MyComponent foo={20} />
       </div>
     );
   }
