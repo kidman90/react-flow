@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import './App.css';
 
 type Props = {
@@ -18,7 +18,7 @@ MyComponent.defaultProps = {
   foo: 1993
 };
 
-class App extends Component<Props, State> {
+class App extends React.Component<Props, State> {
   static defaultProps = {
     foo: 42
   };
