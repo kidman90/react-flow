@@ -10,6 +10,10 @@ type State = {
 };
 
 class App extends Component<Props, State> {
+  static defaultProps = {
+    foo: 42
+  };
+
   state = {
     count: 0
   };

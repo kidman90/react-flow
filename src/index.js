@@ -8,7 +8,10 @@ const root: ?Element = document.getElementById('root');
 
 if (root != null) {
   ReactDOM.render(
-  <App foo={45} />,
+  <div>foo={102}
+    <App />
+    <App  />
+  </div>,
   root
 );
   registerServiceWorker();
