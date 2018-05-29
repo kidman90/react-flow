@@ -14,6 +14,10 @@ function MyComponent(props: Props) {
   return <div>{props.foo}</div>;
 }
 
+MyComponent.defaultProps = {
+  foo: 1993
+};
+
 class App extends Component<Props, State> {
   static defaultProps = {
     foo: 42
@@ -37,6 +41,7 @@ class App extends Component<Props, State> {
         <div>{this.props.foo}</div>
         <div>Count: {this.state.count}</div>
         <MyComponent foo={20} />
+        <MyComponent />
       </div>
     );
   }
